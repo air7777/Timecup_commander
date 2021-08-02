@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2EF8860C-8F3F-4F3D-9036-10364B4DCD03}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Timecup_commander.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Samples\CPP\Multi-Device Samples\Device Sensors and Services\Bluetooth\BLEScanner\BLEScannerCpp.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\BT_WINDOWS - BLE - commander\Timecup_parameters.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Timecup_commander">
+        <MSBuild Projects="Timecup_commander.cbproj"/>
+    </Target>
+    <Target Name="Timecup_commander:Clean">
+        <MSBuild Projects="Timecup_commander.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Timecup_commander:Make">
+        <MSBuild Projects="Timecup_commander.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="BLEScannerCpp">
+        <MSBuild Projects="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Samples\CPP\Multi-Device Samples\Device Sensors and Services\Bluetooth\BLEScanner\BLEScannerCpp.cbproj"/>
+    </Target>
+    <Target Name="BLEScannerCpp:Clean">
+        <MSBuild Projects="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Samples\CPP\Multi-Device Samples\Device Sensors and Services\Bluetooth\BLEScanner\BLEScannerCpp.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BLEScannerCpp:Make">
+        <MSBuild Projects="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Samples\CPP\Multi-Device Samples\Device Sensors and Services\Bluetooth\BLEScanner\BLEScannerCpp.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Timecup_parameters">
+        <MSBuild Projects="..\BT_WINDOWS - BLE - commander\Timecup_parameters.cbproj"/>
+    </Target>
+    <Target Name="Timecup_parameters:Clean">
+        <MSBuild Projects="..\BT_WINDOWS - BLE - commander\Timecup_parameters.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Timecup_parameters:Make">
+        <MSBuild Projects="..\BT_WINDOWS - BLE - commander\Timecup_parameters.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Timecup_commander;BLEScannerCpp;Timecup_parameters"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Timecup_commander:Clean;BLEScannerCpp:Clean;Timecup_parameters:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Timecup_commander:Make;BLEScannerCpp:Make;Timecup_parameters:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
