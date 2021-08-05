@@ -12,6 +12,12 @@
         <Projects Include="..\BT_WINDOWS - BLE - commander\Timecup_parameters.cbproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="..\demos IPWorks BLE 2020 C++ Builder Edition\bleclient\bleclient_10.3_Rio.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\WCL\VCL\Demo\Bluetooth\CBuilder\GattClient\GattClient_C103.cbproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +53,32 @@
     <Target Name="Timecup_parameters:Make">
         <MSBuild Projects="..\BT_WINDOWS - BLE - commander\Timecup_parameters.cbproj" Targets="Make"/>
     </Target>
+    <Target Name="bleclient_10_3_Rio">
+        <MSBuild Projects="..\demos IPWorks BLE 2020 C++ Builder Edition\bleclient\bleclient_10.3_Rio.cbproj"/>
+    </Target>
+    <Target Name="bleclient_10_3_Rio:Clean">
+        <MSBuild Projects="..\demos IPWorks BLE 2020 C++ Builder Edition\bleclient\bleclient_10.3_Rio.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="bleclient_10_3_Rio:Make">
+        <MSBuild Projects="..\demos IPWorks BLE 2020 C++ Builder Edition\bleclient\bleclient_10.3_Rio.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="GattClient_C103">
+        <MSBuild Projects="..\WCL\VCL\Demo\Bluetooth\CBuilder\GattClient\GattClient_C103.cbproj"/>
+    </Target>
+    <Target Name="GattClient_C103:Clean">
+        <MSBuild Projects="..\WCL\VCL\Demo\Bluetooth\CBuilder\GattClient\GattClient_C103.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GattClient_C103:Make">
+        <MSBuild Projects="..\WCL\VCL\Demo\Bluetooth\CBuilder\GattClient\GattClient_C103.cbproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Timecup_commander;BLEScannerCpp;Timecup_parameters"/>
+        <CallTarget Targets="Timecup_commander;BLEScannerCpp;Timecup_parameters;bleclient_10_3_Rio;GattClient_C103"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Timecup_commander:Clean;BLEScannerCpp:Clean;Timecup_parameters:Clean"/>
+        <CallTarget Targets="Timecup_commander:Clean;BLEScannerCpp:Clean;Timecup_parameters:Clean;bleclient_10_3_Rio:Clean;GattClient_C103:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Timecup_commander:Make;BLEScannerCpp:Make;Timecup_parameters:Make"/>
+        <CallTarget Targets="Timecup_commander:Make;BLEScannerCpp:Make;Timecup_parameters:Make;bleclient_10_3_Rio:Make;GattClient_C103:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

@@ -150,8 +150,9 @@ int __fastcall SendBufferBLE(void)
 {
  TwclGattCharacteristicValue Val;
  int Res,i,j;
-
  if (!IsConnected) return 1;
+
+Form1->StateMachineTimer->Enabled = false;
 
 
 	for (i = 0,j = 0; i < BUFFER_LENGTH && IsConnected; i++,j++)
@@ -162,8 +163,8 @@ int __fastcall SendBufferBLE(void)
 		{
 
 		   j = -1;    // перед входом в следующую итерацию станет 0
-			Res = Form1->wclGattClient1->WriteCharacteristicValue(Form1->mCharacteristic, Val,plNone);
-			Sleep(10);        // Задержка - при скорости 9600 при отправке пропадают символы
+			Res = Form1->wclGattClient1->WriteCharacteristicValue(Form1->mCharacteristic, Val,plNone);   // Val - array
+			Sleep(20);        // Задержка - при скорости 9600 при отправке пропадают символы    было 10, для модуля BT05 пришлось увеличить
 			 if (Res != WCL_E_SUCCESS)
 			 {
 				OutBufferIndex = 0;    // Очистка
@@ -176,6 +177,7 @@ int __fastcall SendBufferBLE(void)
 				 {
 					MessageDlgPos("No communication, error: 0x" + IntToHex(Res, 8), mtError,  TMsgDlgButtons() << mbOK, 0,Form1->Left + 100,Form1->Top + 100);
 				 }
+				Form1->StateMachineTimer->Enabled = true;
 				return(Res);
 			 }
 
@@ -186,7 +188,7 @@ int __fastcall SendBufferBLE(void)
             break;
 		}
 	}
-
+	Form1->StateMachineTimer->Enabled = true;
     return (WCL_E_SUCCESS);
 }
 //---------------------------------------------------------------------------
@@ -614,6 +616,11 @@ int found = 0;
 
 
   // Подписка
+ //************** Фрагмент кода из кнопки Write CCCD subscribe    BLEScannerCpp
+  	Res = wclGattClient1->WriteClientConfiguration(mCharacteristic, true,	goNone, plNone);
+  if (Res != WCL_E_SUCCESS)
+	MessageDlgPos("Subscription CCCD Error: 0x" + IntToHex(Res, 8), mtError, TMsgDlgButtons() << mbOK, 0,Form1->Left + 100,Form1->Top + 100);
+	//***********************
 
 
 	 Res = wclGattClient1->Subscribe(mCharacteristic);
@@ -841,7 +848,7 @@ void __fastcall SendData(void)
         PutCRC();
         break;
       case WRITE_CUSTOM_RECIPES_DATA:
-          CRC.crc16_current = crc16(Recipes.char_custom_recipe,RECIPES_DATA_LENGTH);
+		  CRC.crc16_current = crc16(Recipes.char_custom_recipe,RECIPES_DATA_LENGTH);
         for (i=0,j=0; i<RECIPES_DATA_LENGTH && IsConnected; i++,j++)
         {
 

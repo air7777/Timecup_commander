@@ -68,7 +68,7 @@
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
         <ProjectType>CppVCLApplication</ProjectType>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-        <AllPackageLibs>rtl.lib;vcl.lib;WclBluetoothFrameworkR.lib;wclCommunication.lib;WclCommon.lib;dbrtl.lib;dsnap.lib;Tee.lib;vclimg.lib;tmsdXE12.lib;adortl.lib;vclx.lib;xmlrtl.lib;vclactnband.lib;vcldb.lib;VclSmp.lib;VCLTMSFNCCorePkgDXE12.lib;vclie.lib;VCLTMSFNCChartPkgDXE12.lib;vclwinx.lib</AllPackageLibs>
+        <AllPackageLibs>rtl.lib;vcl.lib;WclBluetoothFrameworkR.lib;wclCommunication.lib;WclCommon.lib;dbrtl.lib;dsnap.lib;Tee.lib;vclimg.lib;tmsdXE12.lib;adortl.lib;vclx.lib;xmlrtl.lib;vclactnband.lib;vcldb.lib;VclSmp.lib;VCLTMSFNCCorePkgDXE12.lib;vclie.lib;VCLTMSFNCChartPkgDXE12.lib;vclwinx.lib;tmsdXE10.lib</AllPackageLibs>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
@@ -120,7 +120,7 @@
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
-        <LinkPackageStatics>rtl.lib;vcl.lib;WclBluetoothFrameworkR.lib;wclCommunication.lib;WclCommon.lib;dbrtl.lib;dsnap.lib;Tee.lib;vclimg.lib;tmsdXE12.lib;adortl.lib;vclx.lib;xmlrtl.lib;vclactnband.lib;vcldb.lib;VclSmp.lib;VCLTMSFNCCorePkgDXE12.lib;vclie.lib;VCLTMSFNCChartPkgDXE12.lib;vclwinx.lib</LinkPackageStatics>
+        <LinkPackageStatics>rtl.lib;vcl.lib;WclBluetoothFrameworkR.lib;wclCommunication.lib;WclCommon.lib;dbrtl.lib;dsnap.lib;Tee.lib;vclimg.lib;tmsdXE12.lib;adortl.lib;vclx.lib;xmlrtl.lib;vclactnband.lib;vcldb.lib;VclSmp.lib;VCLTMSFNCCorePkgDXE12.lib;vclie.lib;VCLTMSFNCChartPkgDXE12.lib;vclwinx.lib;tmsdXE10.lib</LinkPackageStatics>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <BCC_DataAlignment>Byte</BCC_DataAlignment>
@@ -132,6 +132,9 @@
         <BCC_DisableOptimizations>false</BCC_DisableOptimizations>
         <DynamicRTL>false</DynamicRTL>
         <UsePackages>false</UsePackages>
+        <BCC_IncludePath>D:\Distributives\RADStudio10.3.2\TMS Component Pack 9.0.2.0 Full Source Spport Up to XE10.3 RIO;$(BCC_IncludePath)</BCC_IncludePath>
+        <IncludePath>D:\Distributives\RADStudio10.3.2\TMS Component Pack 9.0.2.0 Full Source Spport Up to XE10.3 RIO;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>D:\Distributives\RADStudio10.3.2\TMS Component Pack 9.0.2.0 Full Source Spport Up to XE10.3 RIO;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <Defines>NDEBUG;$(Defines)</Defines>
@@ -141,11 +144,15 @@
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
-        <LinkPackageStatics>rtl.lib;vcl.lib;WclBluetoothFrameworkR.lib;wclCommunication.lib;WclCommon.lib;dbrtl.lib;dsnap.lib;Tee.lib;vclimg.lib;tmsdXE12.lib;adortl.lib;vclx.lib;xmlrtl.lib;vclactnband.lib;vcldb.lib;VclSmp.lib;VCLTMSFNCCorePkgDXE12.lib;vclie.lib;VCLTMSFNCChartPkgDXE12.lib;vclwinx.lib</LinkPackageStatics>
+        <LinkPackageStatics>rtl.lib;vcl.lib;WclBluetoothFrameworkR.lib;wclCommunication.lib;WclCommon.lib;dbrtl.lib;dsnap.lib;Tee.lib;vclimg.lib;tmsdXE12.lib;adortl.lib;vclx.lib;xmlrtl.lib;vclactnband.lib;vcldb.lib;VclSmp.lib;VCLTMSFNCCorePkgDXE12.lib;vclie.lib;VCLTMSFNCChartPkgDXE12.lib;vclwinx.lib;tmsdXE10.lib</LinkPackageStatics>
         <DynamicRTL>false</DynamicRTL>
         <UsePackages>false</UsePackages>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <BCC_IncludePath>D:\Distributives\RADStudio10.3.2\TMS Component Pack 9.0.2.0 Full Source Spport Up to XE10.3 RIO;$(BCC_IncludePath)</BCC_IncludePath>
+        <ILINK_LibraryPath>D:\Distributives\RADStudio10.3.2\TMS Component Pack 9.0.2.0 Full Source Spport Up to XE10.3 RIO;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <BRCC_IncludePath>D:\Distributives\RADStudio10.3.2\TMS Component Pack 9.0.2.0 Full Source Spport Up to XE10.3 RIO;$(BRCC_IncludePath)</BRCC_IncludePath>
+        <TASM_IncludePath>D:\Distributives\RADStudio10.3.2\TMS Component Pack 9.0.2.0 Full Source Spport Up to XE10.3 RIO;$(TASM_IncludePath)</TASM_IncludePath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_3_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -217,7 +224,7 @@
                 <ProjectProperties>
                     <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
                     <ProjectProperties Name="ManagePaths">True</ProjectProperties>
-                    <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+                    <ProjectProperties Name="VerifyPackages">False</ProjectProperties>
                     <ProjectProperties Name="IndexFiles">False</ProjectProperties>
                 </ProjectProperties>
                 <Source>

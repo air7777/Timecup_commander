@@ -3,9 +3,9 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Timecup Commander 1.1'
-  ClientHeight = 593
-  ClientWidth = 603
+  Caption = 'Timecup Commander 1.2'
+  ClientHeight = 594
+  ClientWidth = 605
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,8 +21,8 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 927
-    Top = 564
+    Left = 923
+    Top = 644
     Width = 14
     Height = 13
     Caption = 'OK'
@@ -1000,8 +1000,8 @@ object Form1: TForm1
     Visible = False
   end
   object Image14: TImage
-    Left = 973
-    Top = 483
+    Left = 969
+    Top = 563
     Width = 126
     Height = 103
     Picture.Data = {
@@ -2162,8 +2162,8 @@ object Form1: TForm1
     Visible = False
   end
   object TemperatureLEDImage: TImage
-    Left = 880
-    Top = 576
+    Left = 876
+    Top = 656
     Width = 10
     Height = 10
     Picture.Data = {
@@ -2324,8 +2324,8 @@ object Form1: TForm1
     Visible = False
   end
   object TimeLEDImage: TImage
-    Left = 908
-    Top = 576
+    Left = 904
+    Top = 656
     Width = 10
     Height = 10
     Picture.Data = {
@@ -2486,8 +2486,8 @@ object Form1: TForm1
     Visible = False
   end
   object MilkLEDImage: TImage
-    Left = 825
-    Top = 576
+    Left = 821
+    Top = 656
     Width = 10
     Height = 10
     Picture.Data = {
@@ -2648,8 +2648,8 @@ object Form1: TForm1
     Visible = False
   end
   object CoffeeLEDImage: TImage
-    Left = 777
-    Top = 576
+    Left = 773
+    Top = 656
     Width = 10
     Height = 10
     Picture.Data = {
@@ -2810,8 +2810,8 @@ object Form1: TForm1
     Visible = False
   end
   object WaterLEDImage: TImage
-    Left = 801
-    Top = 576
+    Left = 797
+    Top = 656
     Width = 10
     Height = 10
     Picture.Data = {
@@ -3134,9 +3134,9 @@ object Form1: TForm1
   end
   object lvDevices: TListView
     Left = 636
-    Top = 266
+    Top = 217
     Width = 476
-    Height = 54
+    Height = 95
     Columns = <
       item
         Caption = 'Address'
@@ -3160,9 +3160,9 @@ object Form1: TForm1
   end
   object lvCharacteristics: TListView
     Left = 636
-    Top = 390
+    Top = 407
     Width = 476
-    Height = 59
+    Height = 99
     Columns = <
       item
         Caption = 'UUID'
@@ -3226,9 +3226,9 @@ object Form1: TForm1
   end
   object lvServices: TListView
     Left = 636
-    Top = 326
+    Top = 318
     Width = 476
-    Height = 58
+    Height = 79
     Columns = <
       item
         Caption = 'UUID'
@@ -3252,9 +3252,9 @@ object Form1: TForm1
   end
   object lvDescriptors: TListView
     Left = 636
-    Top = 455
+    Top = 512
     Width = 476
-    Height = 89
+    Height = 114
     Columns = <
       item
         Caption = 'UUID'
@@ -3309,7 +3309,7 @@ object Form1: TForm1
     Left = 648
     Top = 35
     Width = 209
-    Height = 182
+    Height = 131
     DoubleBuffered = True
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -3324,7 +3324,7 @@ object Form1: TForm1
   end
   object copyButton1: TButton
     Left = 752
-    Top = 217
+    Top = 172
     Width = 105
     Height = 25
     Caption = 'Copy to clipboard'
@@ -3333,7 +3333,7 @@ object Form1: TForm1
   end
   object clearButton2: TButton
     Left = 648
-    Top = 217
+    Top = 172
     Width = 105
     Height = 25
     Caption = 'Clear'
@@ -3341,8 +3341,8 @@ object Form1: TForm1
     OnClick = clearButton2Click
   end
   object BadDataButton: TButton
-    Left = 825
-    Top = 552
+    Left = 821
+    Top = 632
     Width = 85
     Height = 25
     Caption = 'send bad data'
@@ -9556,8 +9556,8 @@ object Form1: TForm1
     end
   end
   object ReadStatusButton: TButton
-    Left = 734
-    Top = 552
+    Left = 730
+    Top = 632
     Width = 85
     Height = 25
     Caption = 'READ_STATUS'
@@ -9579,8 +9579,8 @@ object Form1: TForm1
     OnClick = ConnectButtonClick
   end
   object RUN_TRADITIONAL_RECIPE: TButton
-    Left = 636
-    Top = 552
+    Left = 632
+    Top = 632
     Width = 92
     Height = 25
     Caption = 'RUN_RECIPE'
@@ -9763,8 +9763,8 @@ object Form1: TForm1
     OnChange = CustomRecipe0TrackBar1Change
   end
   object Panel1: TPanel
-    Left = 892
-    Top = 202
+    Left = 1079
+    Top = 138
     Width = 101
     Height = 73
     BevelOuter = bvNone
@@ -9822,8 +9822,8 @@ object Form1: TForm1
     end
   end
   object Save_ini_file: TButton
-    Left = 916
-    Top = 550
+    Left = 912
+    Top = 630
     Width = 85
     Height = 25
     Caption = 'save ini file'
